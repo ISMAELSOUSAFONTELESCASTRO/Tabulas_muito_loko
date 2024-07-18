@@ -65,7 +65,32 @@ public class Round {
 	player.setChooseToInit(IsIn(house, this.choose_to_init_houses));
 	}
 	
-	
+	public void applyStatusEffects(Persons[] persons) {
+		if(player.isDont_play() == true) {
+			//he does not play for one round
+		}
+		else if(player.isChooseToInit() == true) {
+			//choose a player to go to start
+		}
+		else if(player.isMagic() == true) {
+			
+			/*achando o menor*/
+			int smaller_value = 42;
+			int lower_index = 0;
+			for (int i = 0; i < persons.length; i++) {
+				if (persons[i].getHouse() < smaller_value) {
+	              smaller_value = persons[i].getHouse();
+	                lower_index = i; // Atualiza a posição do menor valor encontrado
+	            }
+	        }
+			
+			player.setHouse(persons[lower_index].getHouse());//take the place of the last one
+			persons[lower_index].setHouse(player.getHouse());
+			
+		}
+		else if(player.isLuck() == true) {
+			player.setHouse(player.getHouse() + 3);//walk 3 more houses
+		}
 	
 	
 	
