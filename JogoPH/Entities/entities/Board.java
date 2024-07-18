@@ -8,8 +8,8 @@ public class Board {
     private List<String>[] board;/**Cria um vetor de listas do tipo String */
     @SuppressWarnings("unchecked")/**Feito para suspender avisos de erros */
     public Board(){
-        board = new ArrayList[41];
-        for(int i = 0; i<41; i++){
+        board = new ArrayList[40];
+        for(int i = 0; i<40; i++){
             board[i] = new ArrayList<>();/**Instancia cada elemento do vetor para não serem valores nulos */
         }
     }
