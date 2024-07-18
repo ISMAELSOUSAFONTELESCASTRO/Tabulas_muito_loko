@@ -1,8 +1,10 @@
+package Aplication;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 import Entities.Board;
 import Entities.Persons;
+import Round.Round;
 public class Principal{
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -21,6 +23,7 @@ public class Principal{
             }
         }
         Persons[] p = new Persons[numero]; /**Vetor com cada elemento sendo as pessoas que estão no jogo */
+        Round[] r = new Round[numero];
         sc.nextLine();
         List<String> cores = new ArrayList<>();/**Cria uma lista com as cores do jogo */
         cores.add("vermelho");
@@ -33,9 +36,27 @@ public class Principal{
             String cor = b.selecionarCores(sc, i, cores);
             char type = b.selecionarStatus(p, i, numero);
             p[i] = new Persons(type, 0, cor);
+            r[i] = new Round(p[i]);
             b.addPerson(p[i].getColor(), 0);
         }
         b.printBoard();
+        k = 0;
+        int rodada = 1;
+        sc.nextLine();
+        while(k != 1){/** Aqui os rouns acontecem mudando de casa até alguem ultrapassar a última casa ou chegar nela*/
+            for(int i = 0; i<numero; i++){
+                System.out.println("Rodada " + 0 + rodada);
+                sc.nextLine();
+                r[i].makeRound(b);
+                if(p[i].getHouse() >= 39){
+                    System.out.println("Feiticeiro com o pino da cor " + p[i].getColor() + " Ganhou a partida!");
+                    k++;
+                    break;
+                }
+                b.printBoard();
+                rodada++;
+            }
+        }
         sc.close();
     }
 }   
