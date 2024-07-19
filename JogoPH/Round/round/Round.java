@@ -92,6 +92,7 @@ public class Round {
 			}
 			
 			persons[choice].setHouse(0);
+			scn.close();
 			
 		}
 		else if(player.isMagic() == true) {
