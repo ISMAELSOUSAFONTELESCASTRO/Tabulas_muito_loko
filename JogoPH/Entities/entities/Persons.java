@@ -13,6 +13,7 @@ public class Persons {
 	private boolean luck;
 	private boolean choose_to_init;
 	private boolean magic;
+	private boolean ardy_pssd;
 	
 	DoubleDice dice = new DoubleDice();
 	
@@ -131,6 +132,7 @@ public class Persons {
 		this.magic = magic;
 		return magic;
 	}
+
 
 	
 	
