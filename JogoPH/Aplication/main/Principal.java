@@ -1,3 +1,4 @@
+package Aplication;
 import visual.*;
 
 import javax.swing.*;
