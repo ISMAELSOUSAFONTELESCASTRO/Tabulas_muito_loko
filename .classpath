@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
-	<classpathentry excluding="Entities/|Aplication/|Dices/dices/|Round/" kind="src" path="JogoPH"/>
+	<classpathentry excluding="Entities/|Aplication/|Dices/|Round/" kind="src" path="JogoPH"/>
 	<classpathentry kind="src" path="JogoPH/Aplication"/>
-	<classpathentry kind="src" path="JogoPH/Dices/dices"/>
+	<classpathentry kind="src" path="JogoPH/Dices"/>
 	<classpathentry kind="src" path="JogoPH/Entities"/>
 	<classpathentry kind="src" path="JogoPH/Round"/>
 	<classpathentry kind="output" path="bin"/>
