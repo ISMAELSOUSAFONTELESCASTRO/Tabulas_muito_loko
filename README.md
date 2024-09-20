@@ -1,2 +1,2 @@
 # Tabulas_muito_loko
-Jogo de tabuleiro do trabalho do ph
+This project, developed by a team of three, involved building a graphical interface for a board game as part of an Object-Oriented Programming (OOP) course in Java. The team designed and implemented the game board, ensuring functionality through the use of Java Swing. Key OOP concepts like inheritance, encapsulation, and polymorphism were applied to structure the game logic, manage player interactions, and control game flow. The project emphasized collaboration, object-oriented design, and the creation of an intuitive, interactive user interface.
